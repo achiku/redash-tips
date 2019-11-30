@@ -17,9 +17,22 @@
 ### create db
 
 ```
+-- as root
 create user redash;
 create database redash;
 grant all on database redash to redash;
+```
+
+```
+-- as root
+create user coolec;
+create database coolec;
+grant all on database coolec to coolec;
+```
+
+```
+-- as coolec
+create schema coolec_api authorization coolec;
 ```
 
 ```.env
